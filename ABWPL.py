@@ -95,5 +95,5 @@ class ABWPL:
             self.PI[prevstate][action] += rate
 
         # project policy back into valid policy space
-        projection(self.PI[prevstate], self.exploration_rate)
+        self.PI[prevstate] = projection(self.PI[prevstate], self.exploration_rate)
 
